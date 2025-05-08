@@ -76,7 +76,7 @@ def recv_the_file(o_ip, o_port) :
                     else: 
                         f.write(data) 
                         data = buf[0].recv(chunk_size).decode()
-                print('Received successfully! New filename is: {}', filename) 
+                print('Received successfully! New filename is: {}'.format(filename)) 
                 f.close()
             if nbr_of_files > 1 :
                 print('waiting for next file for 1 sec, if any')
