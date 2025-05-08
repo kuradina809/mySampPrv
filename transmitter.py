@@ -63,19 +63,19 @@ def recv_the_file(o_ip, o_port) :
         
         wait_cnt = 0
         for buf in rx_buf:
-            data = buf[0].recv(chunk_size).decode() 
+            data = buf[0].recv(chunk_size)
 
             # Creating a new file with date suffix 
             f_suffix= datetime.datetime.now().strftime('%m%d_%H%M%S')
             filename = 'rcvd_file_' + f_suffix
             print(f' using {filename}')
-            with open(filename, 'w') as f :
+            with open(filename, 'wb') as f :
                 while data: 
                     if not data: 
                         break
                     else: 
                         f.write(data) 
-                        data = buf[0].recv(chunk_size).decode()
+                        data = buf[0].recv(chunk_size)
                 print('Received successfully! New filename is: {}'.format(filename)) 
                 f.close()
             if nbr_of_files > 1 :
