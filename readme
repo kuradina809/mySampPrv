@@ -14,3 +14,14 @@
     - Cannot use external libraries, only Python standard library
     - Must handle command line arguments
 
+
+----------------------------------------------------------------------------------------------
+     #---use this a test file
+
+    In 1st terminal,  run the listener as
+    $ python transmitter.py recv  127.0.0.1 1234
+
+
+    In 2nd terminmal, run the sender as
+    $ python transmitter.py readme 127.0.0.1 1234
+
